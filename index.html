@@ -1,71 +1,164 @@
 <!DOCTYPE html>
-<html lang="kk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Әлем Жұлдыздары</title>
+    <title>Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('background.jpg'); /* Add your background image here */
-            background-size: cover; /* Cover the entire page */
-            background-position: center; /* Center the image */
             margin: 0;
-            padding: 20px;
-            color: white; /* Change text color for better visibility */
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            color: white;
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #2980b9;
-        }
-        .star-list {
-            list-style-type: none;
             padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            color: #333;
         }
-        .star-list li {
-            margin: 10px 0;
+        .sidebar {
+            width: 250px;
+            background-color: #2d3e3f;
+            color: #d9d9d9;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow-y: auto;
+        }
+        .sidebar h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .sidebar a {
+            display: block;
+            color: #d9d9d9;
+            text-decoration: none;
+            padding: 8px 0;
+            font-size: 16px;
+        }
+        .sidebar a:hover {
+            background-color: #3e5556;
+        }
+        .content-container {
+            margin-left: 270px;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+        .content {
+            max-width: 1200px;
+            width: 100%;
+        }
+        .content h1 {
+            font-size: 28px;
+            border-bottom: 2px solid #3e5556;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .content h2 {
+            font-size: 24px;
+            margin-top: 30px;
+        }
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .content ul {
+        }
+        .content li {
+            margin-bottom: 20px;
+        }
+        .content code {
+            background-color: #e8e8e8;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 5px;
+        }
+        .tech-stack span {
+            background-color: #3e5556;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 15px;
+            font-size: 12px;
         }
         footer {
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #2d3e3f;
+            color: #d9d9d9;
             text-align: center;
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: white;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Әлем Жұлдыздары</h1>
-    <p>Автор: Руа Жан</p>
-</header>
-
-<nav>
-    <h2>Жұлдыздар тізімі:</h2>
-    <ul class="star-list">
-        <li><a href="sirius.html">Сириус</a></li>
-        <li><a href="betelgeuse.html">Бетельгейзе</a></li>
-        <li><a href="polaris.html">Полярис</a></li>
-        <li><a href="vega.html">Вега</a></li>
-        <li><a href="antares.html">Антарес</a></li>
-        <li><a href="procyon.html">Прокион</a></li>
-    </ul>
-</nav>
-
-<footer>
-    <p>© 2024 Әлем Жұлдыздары. Руа Жан.</p>
-</footer>
-
+    <div class="sidebar">
+        <h2>Portfolio</h2>
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#test-assignments">Test Assignments</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="content-container">
+        <div class="content">
+            <h1 id="home">About Me</h1>
+            <p>Hello! I'm a backend developer.</p>
+            
+            <h2 id="projects">Projects</h2>
+            <ul>
+                <li>
+                    <a href="https://github.com/Vleforn/fastapi-simple-social-app"><strong>FastAPI Simple Social App</strong></a> - A backend for a simple social app. 
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>Pydantic</span>
+                        <span>SQLalchemy</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                    </li>
+                <li>
+                    <a href="https://github.com/Vleforn/asteroids"><strong>Asteroids</strong></a> - A classical retro game made using pygame. 
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>pygame</span>
+                    </div>
+                </li>
+            </ul>
+            
+            <h2 id="test-assignments">Test Assignments</h2>
+                <ul>
+                    <li>
+                        <a href="https://github.com/Vleforn/test-assignment-junior-bewise"><strong>Questions API</strong></a> - An API which saves questions from <a href="https://opentdb.com/">Open Trivia Database</a>.
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>Pydantic</span>
+                            <span>SQLalchemy</span>
+                            <span>PostgreSQL</span>
+                            <span>aiohttp</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Vleforn/golang-test-assignments-middleware"><strong>Simple Middleware</strong></a> 
+                        <div class="tech-stack">
+                            <span>Go</span>
+                            <span>Echo</span>
+                        </div>
+                    </li>
+                </ul>
+            <h2 id="contact">Contact</h2>
+            <p>Email: vleforn@gmail.com</p>
+            <p>GitHub: <a href="https://github.com/vleforn">vleforn</a></p>
+            
+            <footer>
+                &copy; 2025 Portfolio
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
